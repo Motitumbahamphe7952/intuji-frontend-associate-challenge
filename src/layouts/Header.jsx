@@ -14,7 +14,7 @@ import {
 
 export function Header() {
   return (
-    <header className="flex flex-col sm:flex-row items-stretch gap-4 p-4 dark:bg-gray-950 sticky top-0 z-10">
+    <header className="flex flex-col sm:flex-row items-stretch gap-4 p-4 dark:bg-gray-950 sticky top-1 z-10">
 
       <div className="w-full sm:w-2/3 flex items-center">
         <div className="flex items-center bg-white rounded-full px-5 py-3 gap-3 w-full h-full">
@@ -46,20 +46,22 @@ export function Header() {
             </Button>
           </div>
 
-          <div className="flex justify-center w-full">
+          <div className="flex justify-center w-lg">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
-                  className="!h-10 w-full flex items-center justify-center rounded-full gap-2"
+                  className="h-full px-2 sm:px-3 flex items-center justify-center rounded-full gap-2 transition-all duration-200"
                 >
-                  <Avatar className="h-8 w-8 bg-gray-200">
+                  <Avatar className="h-8 !w-10 sm:h-9 sm:!w-11 bg-gray-200">
                     <AvatarFallback>MK</AvatarFallback>
                   </Avatar>
-                  <span className="text-sm font-medium hidden sm:inline">
+                  <span className="text-sm font-medium [@media(max-width:1225px)]:hidden">
                     Mirie Kiritani
                   </span>
                 </Button>
+                
+
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56">
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
@@ -68,12 +70,11 @@ export function Header() {
                 <DropdownMenuItem>Settings</DropdownMenuItem>
                 <DropdownMenuItem>Help</DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem className="text-red-500">
-                  Logout
-                </DropdownMenuItem>
+                <DropdownMenuItem className="text-red-500">Logout</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
+
 
         </div>
       </div>
