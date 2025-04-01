@@ -1,0 +1,14 @@
+// jsconfig.json
+{
+    "compilerOptions": {
+      // Sets the base directory for non-relative imports
+      "baseUrl": ".",
+      // Defines our import alias so that "@/someFolder" maps to "./src/someFolder"
+      "paths": {
+        "@/*": ["src/*"]
+      }
+    },
+    // Specifies which files/directories are included in compilation checks
+    "include": ["src"]
+  }
+  
