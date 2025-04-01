@@ -66,7 +66,8 @@ function StatCard({
           <div className={cn("text-2xl font-bold", isSelected && "text-white")}>
             {value}
           </div>
-          <ArrowRight className="h-4 w-4 text-white/80 dark:text-gray-400" />
+          <ArrowRight className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+          
         </div>
       </CardContent>
     </Card>
@@ -79,7 +80,7 @@ export default function OverviewSection() {
 
   return (
     <section className="h-full space-y-4 rounded-2xl bg-white p-[16px] dark:bg-gray-950 shadow-md">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between pb-7">
         <h2 className="text-xl font-bold">Overview</h2>
       </div>
 
